@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Navbar On Scroll Using HTML, CSS & JavaScript</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="#" class="brand">LiteMap</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="banner"></div>
+    <script>
+        window.onscroll = ()=>{
+            let nav = document.querySelector('nav');
+            if(window.pageYOffset > 0){
+                nav.classList.add('sticky');
+            }else{
+                nav.classList.remove('sticky');
+            }
+        }
+    </script>
+</body>
+</html>
